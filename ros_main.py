@@ -9,7 +9,7 @@ import std_msgs.msg
 import tensorflow as tf
 from geometry_msgs.msg import Point, Point32, Quaternion
 from jsk_recognition_msgs.msg import BoundingBox, BoundingBoxArray
-from lio_sam.srv import detection, detectionRequest, detectionResponse
+from lio_segmot.srv import detection, detectionRequest, detectionResponse
 from scipy.spatial.transform.rotation import Rotation as R
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
@@ -111,7 +111,7 @@ class Detector(object):
                             'end_points': end_points,  # output
                             }
         rospy.init_node('livox_detection', anonymous=True)
-        rospy.Service('se_ssd', detection, self.LIOSLOTCallback)
+        rospy.Service('lio_segmot_detector', detection, self.LIOSLOTCallback)
 
 
     def roty(self, t):
