@@ -5,6 +5,7 @@ services:
     build: .
     volumes:
       - /path/to/catkin_ws/devel/lib/python2.7/dist-packages/lio_segmot:/opt/ros/melodic/lib/python2.7/dist-packages/lio_segmot
+      - ./ros_main.py:/livox-detection/ros_main.py
     network_mode: host
     ipc: host
     tty: true
