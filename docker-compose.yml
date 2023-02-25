@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  se-ssd:
+    build: .
+    volumes:
+      - /path/to/catkin_ws/devel/lib/python2.7/dist-packages/lio_segmot:/opt/ros/melodic/lib/python2.7/dist-packages/lio_segmot
+    network_mode: host
+    ipc: host
+    tty: true
+    stdin_open: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
