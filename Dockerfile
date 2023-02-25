@@ -20,6 +20,10 @@ RUN python3 -m pip install --upgrade scipy
 COPY . /livox-detection
 WORKDIR /livox-detection
 
-COPY bashrc /root/.bashrc
+RUN cd utils/lib_cpp && \
+    git clone https://github.com/pybind/pybind11.git && \
+    mkdir build && cd build && \
+    cmake -DCMAKE_BUILD_TYPE=Release .. && make && \
+    cp lib_cpp.so ../../../
 
 CMD ["bash", "-c", "python3 ros_main.py"]
