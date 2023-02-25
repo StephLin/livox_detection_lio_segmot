@@ -111,7 +111,7 @@ class Detector(object):
                             'end_points': end_points,  # output
                             }
         rospy.init_node('livox_detection', anonymous=True)
-        rospy.Service('se_ssd', detection, self.LIOSLOTCallback)
+        rospy.Service('lio_segmot_detector', detection, self.LIOSLOTCallback)
 
 
     def roty(self, t):
