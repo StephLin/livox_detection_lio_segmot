@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  se-ssd:
+  livox_detection:
     build: .
     volumes:
       - /path/to/catkin_ws/devel/lib/python2.7/dist-packages/lio_segmot:/opt/ros/melodic/lib/python2.7/dist-packages/lio_segmot
