@@ -26,4 +26,4 @@ RUN cd utils/lib_cpp && \
     cmake -DCMAKE_BUILD_TYPE=Release .. && make && \
     cp lib_cpp.so ../../../
 
-CMD ["bash", "-c", "python3 ros_main.py"]
+CMD ["bash", "-c", "source /opt/ros/melodic/setup.bash && python3 ros_main.py"]
