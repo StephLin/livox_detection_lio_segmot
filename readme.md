@@ -51,7 +51,7 @@ $ cp lib_cpp.so ../../../
 ### 1. Build with docker-compose
 
 First, download the [pre_trained model](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/github/Livox_detection1.1_model.zip)
-and unzip it to the project root directory.
+to the project root directory and unzip it.
 
 Then, please run the following command to build the Livox detection image:
 
